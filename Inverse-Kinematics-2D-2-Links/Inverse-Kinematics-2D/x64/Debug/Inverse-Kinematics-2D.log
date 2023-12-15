@@ -1,0 +1,23 @@
+﻿  main.cpp
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(8,1): warning C4005: 'PI': macro redefinition
+D:\C++ Related\Libraries\raylib-5.0_win64_msvc16\include\raylib.h(110,1): message : see previous definition of 'PI'
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(59,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(62,24): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(63,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(66,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(67,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(70,46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(71,46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(89,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(89,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(95,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(96,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(99,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(99,15): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(102,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(103,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(104,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\C++ Related\Games\Inverse-Kinematics-2D\Inverse-Kinematics-2D\main.cpp(104,13): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Inverse-Kinematics-2D.vcxproj -> D:\C++ Related\Games\Inverse-Kinematics-2D\x64\Debug\Inverse-Kinematics-2D.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
