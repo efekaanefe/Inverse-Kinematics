@@ -1,7 +1,9 @@
+
 if __name__ == "__main__":
     import pygame  
     import numpy as np
-
+    from scipy.optimize import minimize
+    
 
     # pygame setup
     WIDTH = 800; HEIGHT = 800;  
@@ -28,12 +30,25 @@ if __name__ == "__main__":
             
 
     # inverse-kinematics
-    N_LINKS = 3
-    LINK_LENGTH = 100
-    angles = np.zeros(N_LINKS)
+    N_LINKS = 2
+    LINK_LENGTH = 100/2
+    angles = np.ones(N_LINKS) * -90
     link_lengths = np.ones(N_LINKS) * LINK_LENGTH
     
     FIXED_POINT_POSITION = np.array([WIDTH//2, HEIGHT//2])
+
+    def get_optimum_angles(angles, link_lengths, target_position): 
+        
+        def get_distance_difference(angles, link_lengths, target_position): # angles -> x
+            positions = get_positions(angles, link_lengths)
+            distance_difference = np.abs(np.sum(target_position - positions[-1]))
+            return distance_difference
+
+        optimized_results = minimize(get_distance_difference, angles, method='nelder-mead',
+                            args = (link_lengths, target_position) ,options={'xatol': 1e-8, 'disp': True})
+        
+        print(optimized_results)
+        return optimized_results.x
 
     def get_positions(angles, link_lengths):
         positions = []
@@ -43,13 +58,13 @@ if __name__ == "__main__":
             angle = angles[i-1]
             link_length = link_lengths[i-1]
             direction = np.array([np.cos(np.deg2rad(angle)), np.sin(np.deg2rad(angle))])
-
             positions.append(prev_pos + link_length * direction)
         return positions
 
 
     # main loop
     running = True
+    target_position = None
     while running: 
 
         screen.fill(BACKGROUND_COLOR)
@@ -58,7 +73,13 @@ if __name__ == "__main__":
           
             if event.type == pygame.QUIT: 
                 running = False
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                target_position = event.pos
         
+        if target_position:
+            angles = get_optimum_angles(angles, link_lengths, target_position)
+            target_position = None
+
         positions = get_positions(angles, link_lengths)
         draw_links(positions, screen)
         pygame.display.update()
