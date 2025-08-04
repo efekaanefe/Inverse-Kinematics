@@ -16,7 +16,7 @@ class FrankaPandaIK:
             [0.0825, np.pi/2,    0,      0],      # Joint 4
             [-0.0825, -np.pi/2,  0.384,  0],      # Joint 5
             [0,     np.pi/2,     0,      0],      # Joint 6
-            [0.088,  np.pi/2,    0,      0],      # Joint 7
+            [0.088,  np.pi/2,    0,      0],      # Joint 7"
         ])
         
         # Joint limits (radians)
@@ -89,7 +89,7 @@ class FrankaPandaIK:
             
             J[:3, i] = np.cross(z_i, p_ee - p_i)
             J[3:, i] = z_i
-        
+            
         return J
     
     def inverse_kinematics(self, target_pos, target_rot, initial_guess=None, 
@@ -490,6 +490,8 @@ class PandaVisualizer:
     def show(self):
         plt.tight_layout()
         plt.show()
+        plt.close('all')  # Add this line to ensure proper cleanup
+
 
 
 # Main execution
