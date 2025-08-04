@@ -29,8 +29,8 @@ if __name__ == "__main__":
             
 
     # inverse-kinematics
-    N_LINKS = 8
-    LINK_LENGTH = 100//3
+    N_LINKS = 10
+    LINK_LENGTH = 100//2
     angles = np.ones(N_LINKS) * 15
     link_lengths = np.ones(N_LINKS) * LINK_LENGTH
     
@@ -76,7 +76,6 @@ if __name__ == "__main__":
             elif pygame.mouse.get_pressed()[0]:
                 target_position = pygame.mouse.get_pos()
     
-        
         if target_position:
             angles = get_optimum_angles(angles, link_lengths, target_position)
             target_position = None
